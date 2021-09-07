@@ -7,7 +7,7 @@ with open('static/datasets/reworked.txt') as f:
     text = f.read()
 
 text_model = markovify.Text(
-    text, state_size=2, well_formed=True)
+    text, state_size=3, well_formed=False)
 
 
 @app.route('/', methods=['POST', 'GET'])

@@ -3,7 +3,7 @@ import markovify
 
 app = Flask(__name__)
 
-with open('static/datasets/cleaned-v1.txt') as f:
+with open('static/datasets/reworked.txt') as f:
     text = f.read()
 
 text_model = markovify.Text(

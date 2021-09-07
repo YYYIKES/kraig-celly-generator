@@ -1,2 +1,2 @@
-# ash-crook-clone
- A text generator using a data set of everything I've written in my life
+# kraig-celly-generator
+ A text generator using scraped tweets from Craig Kelly's account, then fucking with the dataset.

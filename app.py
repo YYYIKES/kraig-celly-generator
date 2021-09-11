@@ -7,7 +7,7 @@ with open('static/datasets/reworked.txt') as f:
     text = f.read()
 
 text_model = markovify.Text(
-    text, state_size=2, well_formed=True)
+    text, state_size=3, well_formed=False)
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -15,7 +15,7 @@ def index():
     if request.method == 'POST':
         for i in range(5):
             genText = text_model.make_short_sentence(
-                10000, min_chars=280, tries=1000, max_overlap_ratio=0.5)
+                10000, min_chars=180, tries=1000, max_overlap_ratio=0.5)
         return render_template('index.html', genText=genText)
     else:
         return render_template('index.html')
